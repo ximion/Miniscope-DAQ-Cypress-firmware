@@ -1624,7 +1624,8 @@ UVCHandleCameraTerminalRqts (void)
         case CY_FX_UVC_CT_ZOOM_ABSOLUTE_CONTROL:          // Unused
             switch (bRequest) {
                 case CY_FX_USB_UVC_GET_INFO_REQ:
-                    glEp0Buffer[0] = 3; /* Support GET/SET queries. */
+                    /* we only support reading data from these controls */
+                    glEp0Buffer[0] = UVC_CONTROL_CAP_GET | UVC_CONTROL_CAP_AUTOUPDATE;
                     CyU3PUsbSendEP0Data (1, (uint8_t *)glEp0Buffer);
 
                     break;

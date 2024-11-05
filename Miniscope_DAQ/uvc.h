@@ -256,6 +256,13 @@
 #define CY_FX_UVC_VC_ERROR_CODE_INVALID_VAL_IN_RANGE        (0x08)
 #define CY_FX_UVC_VC_ERROR_CODE_UNKNOWN                     (0xFF)
 
+/* Capabilities */
+#define UVC_CONTROL_CAP_GET				(1 << 0)
+#define UVC_CONTROL_CAP_SET				(1 << 1)
+#define UVC_CONTROL_CAP_DISABLED			(1 << 2)
+#define UVC_CONTROL_CAP_AUTOUPDATE			(1 << 3)
+#define UVC_CONTROL_CAP_ASYNCHRONOUS			(1 << 4)
+
 /* Enum for a DMA reset event */
 typedef enum CyFxUvcDmaResetVal
 {
